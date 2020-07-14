@@ -1,1 +1,1 @@
-# one-school
+An On-line school program website
