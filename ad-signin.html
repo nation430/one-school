@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/ad-signin.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <title>School board</title>
+  </head>
+  <body>
+    <div class="wrapper overlay">
+      <nav>
+        <section class="top-nav">
+          <div class="logo">
+            <!-- <img src="" alt="" class="OneSchool-img" /> -->
+            <h1 class="logo-header">OneSchool</h1>
+          </div>
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="menu">
+            <li class="nav-link active"><a href="index.html"> Home </a></li>
+            <li class="nav-link"><a href="#"> Courses </a></li>
+            <li class="nav-link"><a href="#"> Programs </a></li>
+            <li class="nav-link">
+              <a href="lecturersReview.html"> Lecturers Reviews </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="btn" type="button">CONTACT US</button></a
+              >
+            </li>
+            <li>
+              <a href="login.html">
+                <button class="btn" type="button">Login In</button></a
+              >
+            </li>
+          </ul>
+        </section>
+      </nav>
+      <main>
+        <section class="column-layout">
+          <h1 class="link">Welcome to The Admission Page</h1>
+          <h2><a href="#openModal">Click to Sign in</a></h2>
+
+          <div id="openModal" class="modalCss">
+            <div class="contents">
+              <a href="#close" class="close">X</a>
+              <div class="header">
+                <h2>Sign In</h2>
+              </div>
+              <form
+                action="admission.html"
+                class="form simpleform"
+                id="form"
+                onsubmit="return validateForm()"
+              >
+                <div class="form-control">
+                  <label for="">Email</label>
+                  <input
+                    type="email"
+                    placeholder=" Hello@tonye430.com"
+                    id="email"
+                  />
+                  <small class="error"></small>
+                </div>
+
+                <div class="form-control">
+                  <label for=""> Password</label>
+                  <input type="password" placeholder="password" id="password" />
+                  <small class="error"></small>
+                </div>
+
+                <button class="btn" type="submit">Sign In</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script/signin.js"></script>
+  </body>
+</html>

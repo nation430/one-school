@@ -1,0 +1,85 @@
+body {
+  overflow: hidden;
+}
+.test-container {
+  font-family: poppins;
+  display: flex;
+  /* padding-top: 10rem; */
+}
+
+.test-wrapper {
+  padding: 20px 30px;
+  flex: 1;
+}
+.title-head {
+  font-size: 40px;
+  margin-bottom: 2px;
+}
+.title-sub {
+  font-size: 25px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.question {
+  font-size: 23px;
+  padding: 1rem;
+}
+.option {
+  /* list-style: none; */
+  display: flex;
+  flex-direction: column;
+}
+.option span {
+  padding: 8px 11px;
+  margin: 6px 0;
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: 0.3s;
+}
+.option :hover {
+  background: #eee;
+}
+.correct {
+  background: lime !important;
+  color: #fff;
+}
+
+.wrong {
+  background: lightcoral !important;
+  color: #fff;
+}
+.btn-test {
+  padding: 7px 42px;
+  border: none;
+  background: dodgerblue;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.plc {
+  flex: 1;
+}
+.submit {
+  padding: 7px 42px;
+  border: none;
+  background: limegreen;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+
+.result {
+  padding: 20px 30px;
+  width: 50%;
+  display: none;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.result__head {
+  font-size: 40px;
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/student-dashboard.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <title>student-dashboard</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav>
+        <a href="#0">
+          <img
+            class="logo"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/vertical-logo.svg"
+            alt="forecastr logo"
+          />
+        </a>
+        <button
+          class="toggle-mob-menu"
+          aria-expanded="false"
+          aria-label="open menu"
+        >
+          <svg width="20" height="20" aria-hidden="true">
+            <use xlink:href="#down"></use>
+          </svg>
+        </button>
+        <ul class="admin-menu">
+          <li>
+            <a href="student-dashboard.html">
+              <svg>
+                <use xlink:href="#pages"></use>
+              </svg>
+              <span>Student</span>
+            </a>
+          </li>
+          <li>
+            <a href="courses.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a href="library.html">
+              <svg>
+                <use xlink:href="#trends"></use>
+              </svg>
+              <span> Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="department.html">
+              <svg>
+                <use xlink:href="#trends"></use>
+              </svg>
+              <span> Department</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="holiday.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span> Holiday</span>
+            </a>
+          </li>
+          <li>
+            <a href="test.html">
+              <svg>
+                <use xlink:href="#trends"></use>
+              </svg>
+              <span> Test</span>
+            </a>
+          </li>
+          <li>
+            <button
+              class="collapse-btn"
+              aria-expanded="true"
+              aria-label="collapse menu"
+            >
+              <svg aria-hidden="true">
+                <use xlink:href="#collapse"></use>
+              </svg>
+              <span>Collapse</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="page-content">
+      <section class="search-and-user">
+        <form>
+          <input type="search" placeholder="Search Pages..." />
+          <button type="submit" aria-label="submit form">
+            <svg aria-hidden="true">
+              <use xlink:href="#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="admin-profile">
+          <span class="greeting">Hello student!</span>
+          <div class="notifications">
+            <span class="badge">1</span>
+            <svg>
+              <use xlink:href="#users"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="page-title">
+          <div class="page-div">All Department List</div>
+          <div class="ol-div">
+            <ol class="card-ol">
+              <li>
+                <i class="fa fa-home"></i>&nbsp;<a
+                  class="parent-item"
+                  href="index.html"
+                  >Home</a
+                >&nbsp;<i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a class="parent-item" href="">Department</a>&nbsp;<i
+                  class="fa fa-angle-right"
+                ></i>
+              </li>
+              <li class="active">All Department List</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <div class="student-wrapper">
+        <section class="grid">
+          <div class="row row-table">
+            <div class="col-md-12">
+              <h3 class="table-h3">Department List</h3>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                  Tools <i class="fa fa-angle-down"></i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <ul
+                    class="dropdown-menu pull-right"
+                    style="will-change: transform;"
+                  >
+                    <li>
+                      <a href="javascript:;">
+                        <i class="fa fa-print"></i> Print
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="fa fa-file-pdf-o"></i> Save as PDF
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:;">
+                        <i class="fa fa-file-excel-o"></i> Export to Excel
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="library-layout">
+                <div class="col-sm-12 col-md-6">
+                  <div class="dataTables_length">
+                    <label
+                      >Show
+                      <select
+                        name="select"
+                        aria-controls="example4"
+                        class="form-control"
+                        ><option value="10">10</option
+                        ><option value="25">25</option
+                        ><option value="50">50</option
+                        ><option value="100">100</option></select
+                      >
+                      entries</label
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                  <div class="dataTables_filter">
+                    <label
+                      >Search:<input
+                        type="search"
+                        class="form-control"
+                        placeholder=""
+                        aria-controls="example4"
+                    /></label>
+                  </div>
+                </div>
+              </div>
+              <table>
+                <tr>
+                  <th>#</th>
+                  <th>Dept.Name</th>
+                  <th>Head of Dept.</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Starting Year</th>
+                  <th>Student Capacity</th>
+                </tr>
+                <tr>
+                  <td>
+                    1
+                  </td>
+                  <td>Mechanical Engg.</td>
+                  <td>Sanjay Chohan</td>
+                  <td>+123 4567890</td>
+                  <td>test@example.com</td>
+                  <td>1998</td>
+                  <td>150</td>
+                </tr>
+                <tr>
+                  <td>
+                    2
+                  </td>
+                  <td>Civil Engg.</td>
+                  <td>Mykel Kelvin</td>
+                  <td>+234 4567890</td>
+                  <td>mykel@example.com</td>
+                  <td>1998</td>
+                  <td>130</td>
+                </tr>
+                <tr>
+                  <td>
+                    3
+                  </td>
+                  <td>Electrical Engg.</td>
+                  <td>Lilian Love</td>
+                  <td>+234 4567866</td>
+                  <td>lilian@gmail.com</td>
+                  <td>1998</td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>
+                    4
+                  </td>
+                  <td>Computer Engg.</td>
+                  <td>Jennifer Chohan</td>
+                  <td>+134 4567866</td>
+                  <td>jennifer@gmail.com</td>
+                  <td>200</td>
+                  <td>250</td>
+                </tr>
+                <tr>
+                  <td>
+                    5
+                  </td>
+                  <td>M.C.A.</td>
+                  <td>Pooja Sarma</td>
+                  <td>+123 4567890</td>
+                  <td>test@example.com</td>
+                  <td>1998</td>
+                  <td>160</td>
+                </tr>
+                <tr>
+                  <td>
+                    6
+                  </td>
+                  <td>Mechanic</td>
+                  <td>Julia Beans</td>
+                  <td>+232 4567890</td>
+                  <td>test@example.com</td>
+                  <td>1990</td>
+                  <td>150</td>
+                </tr>
+                <tr>
+                  <td>
+                    7
+                  </td>
+                  <td>M.B.A.</td>
+                  <td>Major Banks</td>
+                  <td>+123 4567890</td>
+                  <td>major@example.com</td>
+                  <td>1992</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>
+                    8
+                  </td>
+                  <td>Time History</td>
+                  <td>Naomi Pride</td>
+                  <td>+123 4567890</td>
+                  <td>major@example.com</td>
+                  <td>1986</td>
+                  <td>250</td>
+                </tr>
+                <tr>
+                  <td>
+                    9
+                  </td>
+                  <td>Parallel Computing</td>
+                  <td>Harry Mauris</td>
+                  <td>+223 4567890</td>
+                  <td>test@example.com</td>
+                  <td>1986</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>
+                    10
+                  </td>
+                  <td>Java Black Book</td>
+                  <td>Bruno Brown</td>
+                  <td>+342 4567890</td>
+                  <td>test@example.com</td>
+                  <td>200</td>
+                  <td>500</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer">
+        <small
+          >Made with <span>❤</span> by
+          <a href="#" target="_blank">T.Nation</a>
+        </small>
+      </footer>
+    </section>
+    <script src="script/student.js"></script>
+  </body>
+</html>

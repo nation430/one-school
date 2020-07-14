@@ -1,0 +1,82 @@
+body {
+  overflow: hidden;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.login-container {
+  position: relative;
+  margin-top: 40px;
+  width: 450px;
+  height: auto;
+  background: #dedede;
+  border-radius: 5px;
+}
+.login-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.loginimg-fluid {
+  max-width: 100%;
+  width: 16%;
+}
+.header {
+  padding: 10px 100px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #130f40;
+  text-align: center;
+}
+
+.login_form {
+  padding: 5px 40px 30px;
+}
+.login_form .label {
+  font-size: 18px;
+  color: #130f40;
+  margin: 5px 0;
+}
+
+.login_form input {
+  height: 40px;
+  width: 350px;
+  padding: 0 5px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid goldenrod;
+}
+.login_form .label2 {
+  margin-top: 30px;
+}
+.login_form button {
+  padding: 10px 9.3rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+  background-image: linear-gradient(45deg, dodgerblue, #1a237e);
+  color: #fff;
+  font-weight: bolder;
+  border-radius: 3px;
+  border: 1px solid #3949ab;
+}
+.login_form button:hover {
+  background: #151c6a;
+}
+
+.login_form #email_error,
+.login_form #pass_error {
+  margin-top: 5px;
+  width: 345px;
+  font-size: 12px;
+  color: #c62828;
+  background: rgb(255, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #ef9a9a;
+  display: none;
+}

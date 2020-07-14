@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/student-dashboard.css" />
+    <!-- <link rel="stylesheet" href="css/admission.css" /> -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <title>student-dashboard</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav>
+        <a href="#0">
+          <img
+            class="logo"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/vertical-logo.svg"
+            alt="forecastr logo"
+          />
+        </a>
+        <button
+          class="toggle-mob-menu"
+          aria-expanded="false"
+          aria-label="open menu"
+        >
+          <svg width="20" height="20" aria-hidden="true">
+            <use xlink:href="#down"></use>
+          </svg>
+        </button>
+        <ul class="admin-menu">
+          <li>
+            <a href="admission.html">
+              <svg>
+                <use xlink:href="#pages"></use>
+              </svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="Professors.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span>Professors</span>
+            </a>
+          </li>
+
+          <li>
+            <button
+              class="collapse-btn"
+              aria-expanded="true"
+              aria-label="collapse menu"
+            >
+              <svg aria-hidden="true">
+                <use xlink:href="#collapse"></use>
+              </svg>
+              <span>Collapse</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="page-content">
+      <section class="search-and-user">
+        <form>
+          <input type="search" placeholder="Search Pages..." />
+          <button type="submit" aria-label="submit form">
+            <svg aria-hidden="true">
+              <use xlink:href="#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="admin-profile">
+          <span class="greeting">Hello student!</span>
+          <div class="notifications">
+            <span class="badge">1</span>
+            <svg>
+              <use xlink:href="#users"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="page-title">
+          <div class="page-div">Professors List</div>
+          <div class="ol-div">
+            <ol class="card-ol">
+              <li>
+                <i class="fa fa-home"></i>&nbsp;<a
+                  class="parent-item"
+                  href="index.html"
+                  >Home</a
+                >&nbsp;<i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a class="parent-item" href="">professors</a>&nbsp;<i
+                  class="fa fa-angle-right"
+                ></i>
+              </li>
+              <li class="active">Professors List</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <div class="student-wrapper">
+        <section class="grid board1_section">
+          <div class="board1_tabs">
+            <ul>
+              <li class="active" data-li="today">List View</li>
+              <li data-li="month">Grid View</li>
+            </ul>
+          </div>
+          <div class="board1_wrap">
+            <div
+              class="row row-table board1_item today"
+              style="display: block;"
+            >
+              <div class="col-md-12">
+                <div class="card-head">
+                  <h3 class="">All Professors</h3>
+                  <div class="tools">
+                    <a
+                      class="fa fa-repeat btn-color box-refresh"
+                      href="javascript:;"
+                    ></a>
+                    <a
+                      class="t-collapse btn-color fa fa-chevron-down"
+                      href="javascript:;"
+                    ></a>
+                    <a
+                      class="t-close btn-color fa fa-times"
+                      href="javascript:;"
+                    ></a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">
+                    Tools <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <ul
+                      class="dropdown-menu pull-right"
+                      style="will-change: transform;"
+                    >
+                      <li>
+                        <a href="javascript:;">
+                          <i class="fa fa-print"></i> Print
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <i class="fa fa-file-pdf-o"></i> Save as PDF
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <i class="fa fa-file-excel-o"></i> Export to Excel
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="library-layout">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length">
+                      <label
+                        >Show
+                        <select
+                          name="select"
+                          aria-controls="example4"
+                          class="form-control"
+                          ><option value="10">10</option
+                          ><option value="25">25</option
+                          ><option value="50">50</option
+                          ><option value="100">100</option></select
+                        >
+                        entries</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_filter">
+                      <label
+                        >Search:<input
+                          type="search"
+                          class="form-control"
+                          placeholder=""
+                          aria-controls="example4"
+                      /></label>
+                    </div>
+                  </div>
+                </div>
+                <table>
+                  <tr>
+                    <th>img</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Gender</th>
+                    <th>Degree</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>joining Date</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Rajesh</td>
+                    <td>Computer</td>
+                    <td>Male</td>
+                    <td>M.com,B.Ed</td>
+                    <td>+232 444334555</td>
+                    <td>Rajesh@gmail.com</td>
+                    <td>22 feb 2020</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Poojah</td>
+                    <td>Mechanic</td>
+                    <td>Female</td>
+                    <td>M.Eng,</td>
+                    <td>+232 444334555</td>
+                    <td>Poojah@gmail.com</td>
+                    <td>20 Jan 2020</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Jacob</td>
+                    <td>Religious</td>
+                    <td>Male</td>
+                    <td>M.B,Phd.Ed</td>
+                    <td>+232 444334555</td>
+                    <td>Jacob@gmail.com</td>
+                    <td>11 Aug 2018</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Moses</td>
+                    <td>History</td>
+                    <td>Male</td>
+                    <td>M.B,Phd.History</td>
+                    <td>444334555</td>
+                    <td>Moses@gmail.com</td>
+                    <td>30 Nov 2018</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Loveth</td>
+                    <td>English</td>
+                    <td>Female</td>
+                    <td>M.B,Phd.English</td>
+                    <td>662227555</td>
+                    <td>Loveth@gmail.com</td>
+                    <td>30 Nov 2019</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Akpan</td>
+                    <td>Chemical Eng</td>
+                    <td>Male</td>
+                    <td>M.Eng,Phd.Eng</td>
+                    <td>444334555</td>
+                    <td>Akpan@gmail.com</td>
+                    <td>30 Jan 2017</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Bruce</td>
+                    <td>Computer</td>
+                    <td>Male</td>
+                    <td>M.Sc,Phd.Sc</td>
+                    <td>444334555</td>
+                    <td>Bruce@gmail.com</td>
+                    <td>30 March 2019</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>Sarah Smith</td>
+                    <td>Art</td>
+                    <td>Female</td>
+                    <td>M.A,Phd.A</td>
+                    <td>444334555</td>
+                    <td>Sarah@gmail.com</td>
+                    <td>30 Nov 2018</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="board1_item month" style="display: none;" ;>
+              <div class="col-md-12 card-container">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="./img/course1.jpg" class="card-img-top" alt="" />
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="./img/course2.jpg" class="card-img-top" alt="" />
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="./img/course3.jpg" class="card-img-top" alt="" />
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer">
+        <small
+          >Made with <span>❤</span> by
+          <a href="#" target="_blank">T.Nation</a>
+        </small>
+      </footer>
+    </section>
+    <script src="script/student.js"></script>
+  </body>
+</html>

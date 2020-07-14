@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/program.css" />
+    <title>program</title>
+  </head>
+  <body>
+    <div class="">
+      <section class="wrapper overlay">
+        <nav>
+          <section class="top-nav">
+            <div class="logo">
+              <h1 class="logo-header">OneSchool</h1>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-button-container" for="menu-toggle">
+              <div class="menu-button"></div>
+            </label>
+            <ul class="menu">
+              <li class="nav-link active"><a href="index.html"> Home </a></li>
+              <li class="nav-link"><a href="#"> Courses </a></li>
+              <li class="nav-link"><a href="program.html"> Programs </a></li>
+              <li class="nav-link">
+                <a href="lecturersReview.html"> Lecturers Reviews </a>
+              </li>
+              <li>
+                <a href="#">
+                  <button class="btn" type="button">CONTACT US</button></a
+                >
+              </li>
+              <li>
+                <a href="login.html">
+                  <button class="btn" type="button">Login In</button></a
+                >
+              </li>
+            </ul>
+          </section>
+        </nav>
+        <div class="wrapper_header">
+          <h1>Welcome to the Programe</h1>
+          <p>Go through the programs and select What Program to do</p>
+        </div>
+      </section>
+      <main>
+        <section class="column-layout">
+          <h1>PROGRAM DETAILS</h1>
+          <p>
+            This online database of study programs can help you determine where
+            to study in anywhere and find the programs that most interests you.
+            It contains close to 15,000 undergraduate and graduate study
+            programs including certificates, diplomas and degrees ranging from
+            bachelor’s degrees to doctoral degrees. Each program record in our
+            database links back to more detailed information on the website of
+            the online program that delivers the program.
+          </p>
+        </section>
+        <section class="search-form column-layout">
+          <form class="program-search-form" style="">
+            <header>
+              <h3 class="lined lighter-grey-bg"><span>START HERE</span></h3>
+            </header>
+
+            <label for="k">KEYWORDS</label>
+            <input
+              name="k"
+              id="k"
+              value=""
+              type="text"
+              placeholder="Enter keywords…"
+            />
+
+            <div class="program-search-form-left">
+              <label>Program Level</label>
+              <select
+                name="program_level_merged"
+                tabindex="-1"
+                class="select2-hidden-accessible"
+                aria-hidden="true"
+              >
+                <option value="">-- All --</option>
+                <option>Undergraduate level certificate/diploma</option
+                ><option>Bachelor's/First professional degree</option
+                ><option>Graduate level certificate/diploma</option
+                ><option>Master's degree</option
+                ><option>Doctorate</option> </select
+              ><span
+                class="select2 select2-container select2-container--flat select2-container--below select2-container--focus"
+                dir="ltr"
+                style="width: 305px;"
+                ><span class="selection"
+                  ><span
+                    class="select2-selection select2-selection--single"
+                    role="combobox"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    tabindex="0"
+                    aria-labelledby="select2-program_level_merged-3e-container"
+                    ><span
+                      class="select2-selection__rendered"
+                      id="select2-program_level_merged-3e-container"
+                      title="Undergraduate level certificate/diploma"
+                      >Undergraduate level certificate/diploma</span
+                    ><span class="select2-selection__arrow" role="presentation"
+                      ><b role="presentation"></b></span></span></span
+                ><span class="dropdown-wrapper" aria-hidden="true"></span
+              ></span>
+            </div>
+
+            <div class="program-search-form-right">
+              <label>Language</label>
+              <select
+                name="program_language"
+                tabindex="-1"
+                class="select2-hidden-accessible"
+                aria-hidden="true"
+              >
+                <option value="">-- All --</option>
+                <option value="ENGLISH">English</option>
+                <option value="FRENCH">French</option> </select
+              ><span
+                class="select2 select2-container select2-container--flat select2-container--below"
+                dir="ltr"
+                style="width: 85px;"
+                ><span class="selection"
+                  ><span
+                    class="select2-selection select2-selection--single"
+                    role="combobox"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    tabindex="0"
+                    aria-labelledby="select2-program_language-er-container"
+                    ><span
+                      class="select2-selection__rendered"
+                      id="select2-program_language-er-container"
+                      title="English"
+                      >English</span
+                    ><span class="select2-selection__arrow" role="presentation"
+                      ><b role="presentation"></b></span></span></span
+                ><span class="dropdown-wrapper" aria-hidden="true"></span
+              ></span>
+            </div>
+
+            <input type="submit" value="SEARCH" />
+
+            <script type="text/javascript">
+              jQuery(document).ready(function ($) {
+                $("#more_search_options_container span").on(
+                  "click",
+                  function () {
+                    $(this).parent().find("ul").toggle();
+                  }
+                );
+
+                $("#more_search_options").on("click", function () {
+                  $("#more_search_options_container").toggle();
+                  return false;
+                });
+              });
+            </script>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

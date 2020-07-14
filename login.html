@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <title>School board</title>
+  </head>
+  <body>
+    <div class="wrapper overlay">
+      <nav>
+        <section class="top-nav">
+          <div class="logo">
+            <!-- <img src="" alt="" class="OneSchool-img" /> -->
+            <h1 class="logo-header">OneSchool</h1>
+          </div>
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="menu">
+            <li class="nav-link active"><a href="index.html"> Home </a></li>
+            <li class="nav-link"><a href="#"> Courses </a></li>
+            <li class="nav-link"><a href="#"> Programs </a></li>
+            <li class="nav-link">
+              <a href="lecturersReview.html"> Lecturers Reviews </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="btn" type="button">CONTACT US</button></a
+              >
+            </li>
+            <li>
+              <a href="login.html">
+                <button class="btn" type="button">Login In</button></a
+              >
+            </li>
+          </ul>
+        </section>
+      </nav>
+      <main class="form-wrapper">
+        <div class="login-container">
+          <div class="login-img">
+            <img class="loginimg-fluid" src="./img/logo-2.png" alt="" />
+          </div>
+          <h1 class="header">LOG IN</h1>
+          <form
+            action="student-dashboard.html"
+            class="login_form"
+            name="form"
+            onsubmit="return validated()"
+          >
+            <div class="label">Email or Phone Number</div>
+            <input autocomplete="off" type="text" name="email" />
+            <div id="email_error">
+              Email or Phone Number is required
+            </div>
+            <div class="label label2">Password</div>
+            <input type="password" name="password" />
+            <div id="pass_error">
+              Password is required
+            </div>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="script/login.js"></script>
+  </body>
+</html>

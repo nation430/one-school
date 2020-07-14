@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/student-dashboard.css" />
+    <link rel="stylesheet" href="css/admission.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <title>student-dashboard</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav>
+        <a href="#0">
+          <img
+            class="logo"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/vertical-logo.svg"
+            alt="forecastr logo"
+          />
+        </a>
+        <button
+          class="toggle-mob-menu"
+          aria-expanded="false"
+          aria-label="open menu"
+        >
+          <svg width="20" height="20" aria-hidden="true">
+            <use xlink:href="#down"></use>
+          </svg>
+        </button>
+        <ul class="admin-menu">
+          <li>
+            <a href="admission.html">
+              <svg>
+                <use xlink:href="#pages"></use>
+              </svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="professors.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span>Professors</span>
+            </a>
+          </li>
+
+          <li>
+            <button
+              class="collapse-btn"
+              aria-expanded="true"
+              aria-label="collapse menu"
+            >
+              <svg aria-hidden="true">
+                <use xlink:href="#collapse"></use>
+              </svg>
+              <span>Collapse</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="page-content">
+      <section class="search-and-user">
+        <form>
+          <input type="search" placeholder="Search Pages..." />
+          <button type="submit" aria-label="submit form">
+            <svg aria-hidden="true">
+              <use xlink:href="#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="admin-profile">
+          <span class="greeting">Hello student!</span>
+          <div class="notifications">
+            <span class="badge">1</span>
+            <svg>
+              <use xlink:href="#users"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="page-title">
+          <div class="page-div">Dashboard</div>
+          <div class="ol-div">
+            <ol class="card-ol">
+              <li>
+                <i class="fa fa-home"></i>&nbsp;<a
+                  class="parent-item"
+                  href="index.html"
+                  >Home</a
+                >&nbsp;<i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a class="parent-item" href="">Dashboard</a>&nbsp;<i
+                  class="fa fa-angle-right"
+                ></i>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <div class="student-wrapper">
+        <div class="card-container">
+          <div class="col-sm-3">
+            <div
+              class="card"
+              style="
+                display: flex;
+                background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+                border-radius: 4px;
+              "
+            >
+              <span class="info-box-icon">
+                <i class="fa fa-users" aria-hidden="true"></i>
+              </span>
+              <div class="card-body">
+                <h3 class="card-title info-box-text">
+                  Total Students
+                </h3>
+
+                <p class="card-text info-box-number">
+                  450
+                </p>
+                <div class="bar_wrap">
+                  <div class="inner_bar" style="width: 45%;"></div>
+                </div>
+                <span class="card-text progressbar">
+                  45% increasing...
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div
+              class="card"
+              style="
+                display: flex;
+                background: linear-gradient(45deg, #ffb64d, #ffcb80);
+                border-radius: 3px;
+              "
+            >
+              <span class="info-box-icon">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </span>
+
+              <div class="card-body">
+                <h3 class="card-title info-box-text">
+                  New Students
+                </h3>
+
+                <p class="card-text info-box-number">
+                  155
+                </p>
+                <div class="bar_wrap">
+                  <div class="inner_bar" style="width: 40%;"></div>
+                </div>
+                <span class="card-text progressbar">
+                  40% increasing...
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div
+              class="card"
+              style="
+                display: flex;
+                background: linear-gradient(45deg, #4099ff, #73b4ff);
+                border-radius: 3px;
+              "
+            >
+              <span class="info-box-icon">
+                <i class="fa fa-school" aria-hidden="true"></i>
+              </span>
+
+              <div class="card-body">
+                <h3 class="card-title info-box-text">
+                  Total Course
+                </h3>
+
+                <p class="card-text info-box-number">
+                  52
+                </p>
+                <div class="bar_wrap">
+                  <div class="inner_bar" style="width: 85%;"></div>
+                </div>
+                <span class="card-text progressbar">
+                  85% increasing...
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div
+              class="card"
+              style="
+                display: flex;
+                background: linear-gradient(45deg, #ff5370, #ff869a);
+                border-radius: 3px;
+              "
+            >
+              <span class="info-box-icon">
+                <i class="fa fa-users" aria-hidden="true"></i>
+              </span>
+
+              <div class="card-body">
+                <h3 class="card-title info-box-text">
+                  Fees Collection
+                </h3>
+
+                <p class="card-text info-box-number">
+                  13,921s
+                </p>
+                <div class="bar_wrap">
+                  <div class="inner_bar" style="width: 50%;"></div>
+                </div>
+                <span class="card-text progressbar">
+                  50% increasing...
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="grid">
+          <div class="row row-table">
+            <div class="card-head">
+              <h3 class="table-h3">New Student List</h3>
+              <div class="tools">
+                <a
+                  class="fa fa-repeat btn-color box-refresh"
+                  href="javascript:;"
+                ></a>
+                <a
+                  class="t-collapse btn-color fa fa-chevron-down"
+                  href="javascript:;"
+                ></a>
+                <a
+                  class="t-close btn-color fa fa-times"
+                  href="javascript:;"
+                ></a>
+              </div>
+            </div>
+
+            <table>
+              <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Assigned Professor</th>
+                <th>Date Of Admit</th>
+                <th>Fees</th>
+                <th>Department</th>
+                <th>Country</th>
+              </tr>
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>Jens Brincker</td>
+                <td>Kenny Josh</td>
+                <td>27/05/2020</td>
+                <td>Paid</td>
+                <td>Mechaical</td>
+                <td>Nig</td>
+              </tr>
+              <tr>
+                <td>
+                  2
+                </td>
+                <td>Mark Hay</td>
+                <td>Mykel Kelvin</td>
+                <td>26/02/2020</td>
+                <td>unpaid</td>
+                <td>Science</td>
+                <td>Uganda</td>
+              </tr>
+              <tr>
+                <td>
+                  3
+                </td>
+                <td>Anthony Davie</td>
+                <td>Lilian Love</td>
+                <td>20/06/2020</td>
+                <td>paid</td>
+                <td>Agriculture</td>
+                <td>Nig</td>
+              </tr>
+              <tr>
+                <td>
+                  4
+                </td>
+                <td>Sue Woodger</td>
+                <td>Jennifer Chohan</td>
+                <td>12/07/2019</td>
+                <td>unpaid</td>
+                <td>M.B.A</td>
+                <td>Gh</td>
+              </tr>
+              <tr>
+                <td>
+                  5
+                </td>
+                <td>Lopita Young</td>
+                <td>Pooja Sarma</td>
+                <td>06/08/2018</td>
+                <td>Paid</td>
+                <td>pharmacotherapy</td>
+                <td>Sengal</td>
+              </tr>
+              <tr>
+                <td>
+                  6
+                </td>
+                <td>klaus Rich</td>
+                <td>Julia Beans</td>
+                <td>08/02/2020</td>
+                <td>Unpaid</td>
+                <td>Mechanic</td>
+                <td>U.S.A</td>
+              </tr>
+              <tr>
+                <td>
+                  7
+                </td>
+                <td>Moses Soul</td>
+                <td>Major Banks</td>
+                <td>20/12/2019</td>
+                <td>Paid</td>
+                <td>M.B.A</td>
+                <td>Canada</td>
+              </tr>
+              <tr>
+                <td>
+                  8
+                </td>
+                <td>Loveth james</td>
+                <td>Naomi Pride</td>
+                <td>29/06/2020</td>
+                <td>paid</td>
+                <td>Science</td>
+                <td>Kenya</td>
+              </tr>
+              <tr>
+                <td>
+                  9
+                </td>
+                <td>Davie Hay</td>
+                <td>Harry Mauris</td>
+                <td>27/05/2020</td>
+                <td>paid</td>
+                <td>History & Diplomacy</td>
+                <td>Nig</td>
+              </tr>
+              <tr>
+                <td>
+                  10
+                </td>
+                <td>Sue Woodger</td>
+                <td>Bruno Brown</td>
+                <td>16/06/2018</td>
+                <td>unpaid</td>
+                <td>M.B.S.S</td>
+                <td>S.A</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer">
+        <small
+          >Made with <span>❤</span> by
+          <a href="#" target="_blank">T.Nation</a>
+        </small>
+      </footer>
+    </section>
+    <script src="script/student.js"></script>
+  </body>
+</html>

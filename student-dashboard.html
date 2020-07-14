@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/student-dashboard.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <title>student-dashboard</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav>
+        <a href="#0">
+          <img
+            class="logo"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/vertical-logo.svg"
+            alt="forecastr logo"
+          />
+        </a>
+        <button
+          class="toggle-mob-menu"
+          aria-expanded="false"
+          aria-label="open menu"
+        >
+          <svg width="20" height="20" aria-hidden="true">
+            <use xlink:href="#down"></use>
+          </svg>
+        </button>
+        <ul class="admin-menu">
+          <li>
+            <a href="student-dashboard.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span>Student</span>
+            </a>
+          </li>
+          <li>
+            <a href="courses.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span>Courses</span>
+            </a>
+          </li>
+          <li>
+            <a href="library.html">
+              <svg>
+                <use xlink:href="#trends"></use>
+              </svg>
+              <span> Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="department.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span> Department</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="holiday.html">
+              <svg>
+                <use xlink:href="#users"></use>
+              </svg>
+              <span> Holiday</span>
+            </a>
+          </li>
+          <li>
+            <a href="test.html">
+              <svg>
+                <use xlink:href="#trends"></use>
+              </svg>
+              <span> Test</span>
+            </a>
+          </li>
+          <li>
+            <button
+              class="collapse-btn"
+              aria-expanded="true"
+              aria-label="collapse menu"
+            >
+              <svg aria-hidden="true">
+                <use xlink:href="#collapse"></use>
+              </svg>
+              <span>Collapse</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="page-content">
+      <section class="search-and-user">
+        <form>
+          <input type="search" placeholder="Search Pages..." />
+          <button type="submit" aria-label="submit form">
+            <svg aria-hidden="true">
+              <use xlink:href="#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="admin-profile">
+          <span class="greeting">Hello student!</span>
+          <div class="notifications">
+            <span class="badge">1</span>
+            <svg>
+              <use xlink:href="#users"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="page-title">
+          <div class="page-div">All Students List</div>
+          <div class="ol-div">
+            <ol class="card-ol">
+              <li>
+                <i class="fa fa-home"></i>&nbsp;<a
+                  class="parent-item"
+                  href="index.html"
+                  >Home</a
+                >&nbsp;<i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a class="parent-item" href="">Courses</a>&nbsp;<i
+                  class="fa fa-angle-right"
+                ></i>
+              </li>
+              <li class="active">All Students List</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <div class="student-wrapper">
+        <section class="grid board1_section">
+          <div class="board1_tabs">
+            <ul>
+              <li class="active" data-li="today">List View</li>
+              <li data-li="month">Grid View</li>
+            </ul>
+          </div>
+          <div class="board1_wrap">
+            <div
+              class="row row-table board1_item today"
+              style="display: block;"
+            >
+              <div class="col-md-12">
+                <h3 class="table-h3">All Students List</h3>
+                <table>
+                  <tr>
+                    <th>img</th>
+                    <th>Roll No</th>
+                    <th>name</th>
+                    <th>Department</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Admission Date</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>1</td>
+                    <td>Mykel Van</td>
+                    <td>Music</td>
+                    <td>07063264292</td>
+                    <td>mykel@gmail.com</td>
+                    <td>22 feb 2020</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>17</td>
+                    <td>Mercy Frank</td>
+                    <td>Mechaanical</td>
+                    <td>07063264292</td>
+                    <td>mercy@gmail.com</td>
+                    <td>22 feb 2020</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>22</td>
+                    <td>John Deo</td>
+                    <td>Science</td>
+                    <td>444786876</td>
+                    <td>pooja@gmail.com</td>
+                    <td>27 Aug 2005</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>4</td>
+                    <td>Jacob Ryan</td>
+                    <td>Arts</td>
+                    <td>07063264292</td>
+                    <td>jacob@gmail.com</td>
+                    <td>22 feb 2020</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>30</td>
+                    <td>Loveth james</td>
+                    <td>computer science</td>
+                    <td>07063264292</td>
+                    <td>loveth@gmail.com</td>
+                    <td>20 jan 2020</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>29</td>
+                    <td>Moses Rajah</td>
+                    <td>Civil</td>
+                    <td>07063264292</td>
+                    <td>moses@gmail.com</td>
+                    <td>22 feb 2019</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>15</td>
+                    <td>Bruce Sunday</td>
+                    <td>Education</td>
+                    <td>4444565756</td>
+                    <td>bruce@gmail.com</td>
+                    <td>22 feb 2018</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="header-img">
+                        <div class="profile-circle"></div>
+                        <img src="" class="profile-pic" />
+                      </div>
+                    </td>
+                    <td>20</td>
+                    <td>Sarah Smith</td>
+                    <td>Thearter Act</td>
+                    <td>4444565756</td>
+                    <td>Sarah@gmail.com</td>
+                    <td>22 Aug 2018</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="board1_item month" style="display: none;" ;>
+              <div class="col-md-12 card-container">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="./img/course1.jpg" class="card-img-top" alt="" />
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="./img/course2.jpg" class="card-img-top" alt="" />
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="./img/course3.jpg" class="card-img-top" alt="" />
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer">
+        <small
+          >Made with <span>❤</span> by
+          <a href="#" target="_blank">T.Nation</a>
+        </small>
+      </footer>
+    </section>
+    <script src="script/student.js"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <title>School board</title>
+  </head>
+  <body>
+    <div class="wrapper overlay">
+      <nav>
+        <section class="top-nav">
+          <div class="logo">
+            <!-- <img src="" alt="" class="OneSchool-img" /> -->
+            <h1 class="logo-header">OneSchool</h1>
+          </div>
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="menu">
+            <li class="nav-link active"><a href="index.html"> Home </a></li>
+            <li class="nav-link"><a href="#"> Courses </a></li>
+            <li class="nav-link"><a href="#"> Programs </a></li>
+            <li class="nav-link">
+              <a href="lecturersReview.html"> Lecturers Reviews </a>
+            </li>
+            <li>
+              <a href="#">
+                <button class="btn" type="button">CONTACT US</button></a
+              >
+            </li>
+            <li>
+              <a href="login.html">
+                <button class="btn" type="button">Login In</button></a
+              >
+            </li>
+          </ul>
+        </section>
+      </nav>
+      <main>
+        <section class="column-layout">
+          <div class="box1">
+            <h2>Learn From The Expert</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur beatae necessitatibus.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
+              porro quaerat non deleniti quibusdam debitis hic ea reprehenderit
+              labore minus ullam aliquid enim nisi natus voluptatum nobis rem
+              autem architecto.
+            </p>
+            <a href="ad-signin.html">
+              <button class="button" type="text">ADMISSION NOW</button>
+            </a>
+          </div>
+          <div class="box2">
+            <form
+              action="program.html"
+              onsubmit="return Validate()"
+              name="vform"
+            >
+              <h2 class="form-header">Sign Up</h2>
+
+              <div id="name_div">
+                <label>Fullname</label> <br />
+                <input
+                  autocomplete="off"
+                  type="text"
+                  name="name"
+                  class="textInput"
+                />
+                <div id="name_error"></div>
+              </div>
+              <div id="email_div">
+                <label>Email</label> <br />
+                <input
+                  autocomplete="off"
+                  type="email"
+                  name="email"
+                  class="textInput"
+                />
+                <div id="email_error"></div>
+              </div>
+              <div id="password_div">
+                <label>Password</label> <br />
+                <input type="password" name="password" class="textInput" />
+              </div>
+              <div id="pass_confirm_div">
+                <label>Password confirm</label> <br />
+                <input
+                  type="password"
+                  name="password_confirm"
+                  class="textInput"
+                />
+                <div id="password_error"></div>
+              </div>
+              <div>
+                <input
+                  type="submit"
+                  name="register"
+                  value="SIGN UP"
+                  class="btn-signup"
+                />
+              </div>
+            </form>
+            <!-- <form>
+              <input type="email" placeholder="Email Address" />
+              <input type="password" placeholder="Password" />
+              <input type="Re-type" placeholder="Re-type Password" />
+              <button class="btn2" type="text">SIGN UP</button>
+            </form> -->
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
