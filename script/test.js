@@ -21,6 +21,7 @@ Question.prototype.displayQuestion = function () {
   const getCorrectAns = function (ans) {
     let picked = ans.target.getAttribute("data-index");
     let adCorrectColor = ans.target;
+
     if (parseInt(picked) === correctAnsewer) {
       score.push(parseInt(picked)),
         (countScore.lastElementChild.innerHTML = score.length);

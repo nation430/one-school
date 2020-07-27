@@ -11,11 +11,7 @@
     <header class="page-header">
       <nav>
         <a href="#0">
-          <img
-            class="logo"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/vertical-logo.svg"
-            alt="forecastr logo"
-          />
+          <img class="logo" src="./img/logo.png" alt="OneSchool logo" />
         </a>
         <button
           class="toggle-mob-menu"
@@ -92,25 +88,480 @@
       </nav>
     </header>
     <section class="page-content">
-      <section class="search-and-user">
-        <form>
-          <input type="search" placeholder="Search Pages..." />
-          <button type="submit" aria-label="submit form">
-            <svg aria-hidden="true">
-              <use xlink:href="#search"></use>
-            </svg>
-          </button>
+      <div class="page-header-inner">
+        <!-- start header menu -->
+        <form class="search-form-opened" action="#" method="GET">
+          <input
+            type="text"
+            class="form-control-header"
+            placeholder="Search..."
+            name="query"
+          />
+
+          <span class="input-group-btn">
+            <a href="javascript:;" class="btn submit">
+              <i class="fa fa-search"></i>
+            </a>
+          </span>
         </form>
         <div class="admin-profile">
-          <span class="greeting">Hello student!</span>
-          <div class="notifications">
-            <span class="badge">1</span>
-            <svg>
-              <use xlink:href="#users"></use>
-            </svg>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn-header">
+              <span class="flag flag-ng"> </span> Nigeria
+              <i class="fa fa-angle-down"></i>
+            </button>
+            <div id="myDropdown" class="dropdown-content-header">
+              <ul class="dropdown-menu show" style="will-change: transform;">
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-us"> </span> USA
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-gh"> </span> Ghana
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-ug"> </span> Uganda
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-sa"> </span> South Africa
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-ca"> </span> Canada
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown notification-dropdown">
+            <button onclick="myFunction()" class="dropbtn-notification">
+              <span class="badge">6</span>
+              <i class="fa fa-bell-o"></i>
+            </button>
+            <div id="myDropdown" class="dropdown-content-notifications">
+              <ul class="dropdown-menu show" style="will-change: transform;">
+                <li class="external">
+                  <h3><span class="bold">Notifications</span></h3>
+                  <span class="notification-label purple-bgcolor">New 6</span>
+                </li>
+                <li>
+                  <div
+                    class="slimScrollDiv"
+                    style="position: relative; overflow: hidden; width: auto;"
+                  >
+                    <ul
+                      class="dropdown-menu-list small-slimscroll-style"
+                      data-handle-color="#637283"
+                      style="overflow: hidden; width: auto;"
+                    >
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">just now</span>
+                          <span class="details">
+                            <span
+                              class="notification-icon circle deepPink-bgcolor"
+                              ><i class="fa fa-check"></i
+                            ></span>
+                            Congratulations!.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">3 mins</span>
+                          <span class="details">
+                            <span
+                              class="notification-icon circle purple-bgcolor"
+                              ><i class="fa fa-user o"></i
+                            ></span>
+                            <b>John Micle </b>is now following you.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">7 mins</span>
+                          <span class="details">
+                            <span class="notification-icon circle blue-bgcolor"
+                              ><i class="fa fa-comments-o"></i
+                            ></span>
+                            <b>Sneha Jogi </b>sent you a message.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">12 mins</span>
+                          <span class="details">
+                            <span class="notification-icon circle pink"
+                              ><i class="fa fa-heart"></i
+                            ></span>
+                            <b>Ravi Patel </b>like your photo.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">15 mins</span>
+                          <span class="details">
+                            <span class="notification-icon circle yellow"
+                              ><i class="fa fa-warning"></i
+                            ></span>
+                            Warning!
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">10 hrs</span>
+                          <span class="details">
+                            <span class="notification-icon circle red"
+                              ><i class="fa fa-times"></i
+                            ></span>
+                            Application error.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div
+                      class="slimScrollBar"
+                      style="
+                        background: rgb(158, 165, 171) none repeat scroll 0% 0%;
+                        width: 5px;
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0.4;
+                        display: none;
+                        border-radius: 7px;
+                        z-index: 99;
+                        right: 1px;
+                        height: 212.579px;
+                      "
+                    ></div>
+                    <div
+                      class="slimScrollRail"
+                      style="
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        display: none;
+                        border-radius: 7px;
+                        background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                        opacity: 0.2;
+                        z-index: 90;
+                        right: 1px;
+                      "
+                    ></div>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="javascript:void(0)"> All notifications </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn-mail">
+              <span class="badge2">2</span>
+              <i class="fa fa-envelope-o"></i>
+            </button>
+            <div id="myDropdown3" class="dropdown-content-mail">
+              <ul class="dropdown-menu show">
+                <li class="external">
+                  <h3><span class="bold">Messages</span></h3>
+                  <span class="notification-label cyan-bgcolor">New 2</span>
+                </li>
+                <li>
+                  <div
+                    class="slimScrollDiv"
+                    style="position: relative; overflow: hidden; width: auto;"
+                  >
+                    <ul
+                      class="dropdown-menu-list small-slimscroll-style"
+                      data-handle-color="#637283"
+                      style="overflow: hidden; width: auto;"
+                    >
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof2.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Sarah Smith </span>
+                            <span class="time">Just Now </span>
+                          </span>
+                          <span class="message">
+                            Jatin I found you on LinkedIn...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof3.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> John Deo </span>
+                            <span class="time">16 mins </span>
+                          </span>
+                          <span class="message">
+                            Fwd: Important Notice Regarding Your Domain Name...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof1.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Rajesh </span>
+                            <span class="time">2 hrs </span>
+                          </span>
+                          <span class="message">
+                            pls take a print of attachments.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof8.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Lina Smith </span>
+                            <span class="time">40 mins </span>
+                          </span>
+                          <span class="message"> Apply for Ortho Surgeon </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof5.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Jacob Ryan </span>
+                            <span class="time">46 mins </span>
+                          </span>
+                          <span class="message">
+                            Request for leave application.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div
+                      class="slimScrollBar"
+                      style="
+                        background: rgb(158, 165, 171) none repeat scroll 0% 0%;
+                        width: 5px;
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0.4;
+                        display: block;
+                        border-radius: 7px;
+                        z-index: 99;
+                        right: 1px;
+                      "
+                    ></div>
+                    <div
+                      class="slimScrollRail"
+                      style="
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        display: none;
+                        border-radius: 7px;
+                        background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                        opacity: 0.2;
+                        z-index: 90;
+                        right: 1px;
+                      "
+                    ></div>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Messages </a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="dropdown-menu">
+                <li class="external">
+                  <h3><span class="bold">Messages</span></h3>
+                  <span class="notification-label cyan-bgcolor">New 2</span>
+                </li>
+                <li>
+                  <div
+                    class="slimScrollDiv"
+                    style="position: relative; overflow: hidden; width: auto;"
+                  >
+                    <ul
+                      class="dropdown-menu-list small-slimscroll-style"
+                      data-handle-color="#637283"
+                      style="overflow: hidden; width: auto;"
+                    >
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof2.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Sarah Smith </span>
+                            <span class="time">Just Now </span>
+                          </span>
+                          <span class="message">
+                            Jatin I found you on LinkedIn...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof3.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> John Deo </span>
+                            <span class="time">16 mins </span>
+                          </span>
+                          <span class="message">
+                            Fwd: Important Notice Regarding Your Domain Name...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof1.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Rajesh </span>
+                            <span class="time">2 hrs </span>
+                          </span>
+                          <span class="message">
+                            pls take a print of attachments.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof8.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Lina Smith </span>
+                            <span class="time">40 mins </span>
+                          </span>
+                          <span class="message"> Apply for Ortho Surgeon </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof5.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Jacob Ryan </span>
+                            <span class="time">46 mins </span>
+                          </span>
+                          <span class="message">
+                            Request for leave application.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div
+                      class="slimScrollBar"
+                      style="
+                        background: rgb(158, 165, 171) none repeat scroll 0% 0%;
+                        width: 5px;
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0.4;
+                        display: block;
+                        border-radius: 7px;
+                        z-index: 99;
+                        right: 1px;
+                      "
+                    ></div>
+                    <div
+                      class="slimScrollRail"
+                      style="
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        display: none;
+                        border-radius: 7px;
+                        background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                        opacity: 0.2;
+                        z-index: 90;
+                        right: 1px;
+                      "
+                    ></div>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Messages </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="student-id">
+            <div class="student-id-img">
+              <img class="img_fluid" src="./img/std3.jpg" alt="" />
+              <span class="img_fluid-span">Joan</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section>
         <div class="page-title">
@@ -279,7 +730,16 @@
               <div class="col-md-12 card-container">
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="./img/course1.jpg" class="card-img-top" alt="" />
+                    <div class="img-container">
+                      <div class="img-div">
+                        <img
+                          class="img_fluid"
+                          src="./img/img1.jpg"
+                          id="person_img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                     <div class="card-body">
                       <h3 class="card-title">
                         Mykel Van
@@ -307,7 +767,16 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="./img/course2.jpg" class="card-img-top" alt="" />
+                    <div class="img-container">
+                      <div class="img-div">
+                        <img
+                          class="img_fluid"
+                          src="./img/img1.jpg"
+                          id="person_img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                     <div class="card-body">
                       <h3 class="card-title">
                         Mykel Van
@@ -335,7 +804,129 @@
                 </div>
                 <div class="col-md-4">
                   <div class="card">
-                    <img src="./img/course3.jpg" class="card-img-top" alt="" />
+                    <div class="img-container">
+                      <div class="img-div">
+                        <img
+                          class="img_fluid"
+                          src="./img/img1.jpg"
+                          id="person_img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 card-container">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="img-container">
+                      <div class="img-div">
+                        <img
+                          class="img_fluid"
+                          src="./img/img1.jpg"
+                          id="person_img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="img-container">
+                      <div class="img-div">
+                        <img
+                          class="img_fluid"
+                          src="./img/img1.jpg"
+                          id="person_img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <h3 class="card-title">
+                        Mykel Van
+                      </h3>
+
+                      <small class="card-text">
+                        Science
+                      </small>
+
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        196,Bende Street.Near Lagos Bus Stop,Port
+                        Harcourt,Rivers State
+                      </p>
+                      <p class="card-text" style="padding-bottom: 12px;">
+                        <a href="">
+                          <i class="fa-fa-phone"></i>(234)632-24292
+                        </a>
+                      </p>
+
+                      <button class="card-button">
+                        <a href="#"> READ MORE</a>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="img-container">
+                      <div class="img-div">
+                        <img
+                          class="img_fluid"
+                          src="./img/img1.jpg"
+                          id="person_img"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                     <div class="card-body">
                       <h3 class="card-title">
                         Mykel Van

@@ -6,17 +6,14 @@
     <link rel="stylesheet" href="css/student-dashboard.css" />
     <link rel="stylesheet" href="css/admission.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flags.css" />
     <title>student-dashboard</title>
   </head>
   <body>
     <header class="page-header">
       <nav>
         <a href="#0">
-          <img
-            class="logo"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/vertical-logo.svg"
-            alt="forecastr logo"
-          />
+          <img class="logo" src="./img/logo.png" alt="OneSchool logo" />
         </a>
         <button
           class="toggle-mob-menu"
@@ -61,25 +58,480 @@
       </nav>
     </header>
     <section class="page-content">
-      <section class="search-and-user">
-        <form>
-          <input type="search" placeholder="Search Pages..." />
-          <button type="submit" aria-label="submit form">
-            <svg aria-hidden="true">
-              <use xlink:href="#search"></use>
-            </svg>
-          </button>
+      <div class="page-header-inner">
+        <!-- start header menu -->
+        <form class="search-form-opened" action="#" method="GET">
+          <input
+            type="text"
+            class="form-control-header"
+            placeholder="Search..."
+            name="query"
+          />
+
+          <span class="input-group-btn">
+            <a href="javascript:;" class="btn submit">
+              <i class="fa fa-search"></i>
+            </a>
+          </span>
         </form>
         <div class="admin-profile">
-          <span class="greeting">Hello student!</span>
-          <div class="notifications">
-            <span class="badge">1</span>
-            <svg>
-              <use xlink:href="#users"></use>
-            </svg>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn-header">
+              <span class="flag flag-ng"> </span> Nigeria
+              <i class="fa fa-angle-down"></i>
+            </button>
+            <div id="myDropdown" class="dropdown-content-header">
+              <ul class="dropdown-menu show" style="will-change: transform;">
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-us"> </span> USA
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-gh"> </span> Ghana
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-ug"> </span> Uganda
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-sa"> </span> South Africa
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <span class="flag flag-ca"> </span> Canada
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown notification-dropdown">
+            <button onclick="myFunction()" class="dropbtn-notification">
+              <span class="badge">6</span>
+              <i class="fa fa-bell-o"></i>
+            </button>
+            <div id="myDropdown" class="dropdown-content-notifications">
+              <ul class="dropdown-menu show" style="will-change: transform;">
+                <li class="external">
+                  <h3><span class="bold">Notifications</span></h3>
+                  <span class="notification-label purple-bgcolor">New 6</span>
+                </li>
+                <li>
+                  <div
+                    class="slimScrollDiv"
+                    style="position: relative; overflow: hidden; width: auto;"
+                  >
+                    <ul
+                      class="dropdown-menu-list small-slimscroll-style"
+                      data-handle-color="#637283"
+                      style="overflow: hidden; width: auto;"
+                    >
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">just now</span>
+                          <span class="details">
+                            <span
+                              class="notification-icon circle deepPink-bgcolor"
+                              ><i class="fa fa-check"></i
+                            ></span>
+                            Congratulations!.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">3 mins</span>
+                          <span class="details">
+                            <span
+                              class="notification-icon circle purple-bgcolor"
+                              ><i class="fa fa-user o"></i
+                            ></span>
+                            <b>John Micle </b>is now following you.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">7 mins</span>
+                          <span class="details">
+                            <span class="notification-icon circle blue-bgcolor"
+                              ><i class="fa fa-comments-o"></i
+                            ></span>
+                            <b>Sneha Jogi </b>sent you a message.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">12 mins</span>
+                          <span class="details">
+                            <span class="notification-icon circle pink"
+                              ><i class="fa fa-heart"></i
+                            ></span>
+                            <b>Ravi Patel </b>like your photo.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">15 mins</span>
+                          <span class="details">
+                            <span class="notification-icon circle yellow"
+                              ><i class="fa fa-warning"></i
+                            ></span>
+                            Warning!
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:;">
+                          <span class="time">10 hrs</span>
+                          <span class="details">
+                            <span class="notification-icon circle red"
+                              ><i class="fa fa-times"></i
+                            ></span>
+                            Application error.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div
+                      class="slimScrollBar"
+                      style="
+                        background: rgb(158, 165, 171) none repeat scroll 0% 0%;
+                        width: 5px;
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0.4;
+                        display: none;
+                        border-radius: 7px;
+                        z-index: 99;
+                        right: 1px;
+                        height: 212.579px;
+                      "
+                    ></div>
+                    <div
+                      class="slimScrollRail"
+                      style="
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        display: none;
+                        border-radius: 7px;
+                        background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                        opacity: 0.2;
+                        z-index: 90;
+                        right: 1px;
+                      "
+                    ></div>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="javascript:void(0)"> All notifications </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn-mail">
+              <span class="badge2">2</span>
+              <i class="fa fa-envelope-o"></i>
+            </button>
+            <div id="myDropdown3" class="dropdown-content-mail">
+              <ul class="dropdown-menu show">
+                <li class="external">
+                  <h3><span class="bold">Messages</span></h3>
+                  <span class="notification-label cyan-bgcolor">New 2</span>
+                </li>
+                <li>
+                  <div
+                    class="slimScrollDiv"
+                    style="position: relative; overflow: hidden; width: auto;"
+                  >
+                    <ul
+                      class="dropdown-menu-list small-slimscroll-style"
+                      data-handle-color="#637283"
+                      style="overflow: hidden; width: auto;"
+                    >
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof2.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Sarah Smith </span>
+                            <span class="time">Just Now </span>
+                          </span>
+                          <span class="message">
+                            Jatin I found you on LinkedIn...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof3.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> John Deo </span>
+                            <span class="time">16 mins </span>
+                          </span>
+                          <span class="message">
+                            Fwd: Important Notice Regarding Your Domain Name...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof1.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Rajesh </span>
+                            <span class="time">2 hrs </span>
+                          </span>
+                          <span class="message">
+                            pls take a print of attachments.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof8.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Lina Smith </span>
+                            <span class="time">40 mins </span>
+                          </span>
+                          <span class="message"> Apply for Ortho Surgeon </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof5.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Jacob Ryan </span>
+                            <span class="time">46 mins </span>
+                          </span>
+                          <span class="message">
+                            Request for leave application.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div
+                      class="slimScrollBar"
+                      style="
+                        background: rgb(158, 165, 171) none repeat scroll 0% 0%;
+                        width: 5px;
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0.4;
+                        display: block;
+                        border-radius: 7px;
+                        z-index: 99;
+                        right: 1px;
+                      "
+                    ></div>
+                    <div
+                      class="slimScrollRail"
+                      style="
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        display: none;
+                        border-radius: 7px;
+                        background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                        opacity: 0.2;
+                        z-index: 90;
+                        right: 1px;
+                      "
+                    ></div>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Messages </a>
+                  </div>
+                </li>
+              </ul>
+              <ul class="dropdown-menu">
+                <li class="external">
+                  <h3><span class="bold">Messages</span></h3>
+                  <span class="notification-label cyan-bgcolor">New 2</span>
+                </li>
+                <li>
+                  <div
+                    class="slimScrollDiv"
+                    style="position: relative; overflow: hidden; width: auto;"
+                  >
+                    <ul
+                      class="dropdown-menu-list small-slimscroll-style"
+                      data-handle-color="#637283"
+                      style="overflow: hidden; width: auto;"
+                    >
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof2.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Sarah Smith </span>
+                            <span class="time">Just Now </span>
+                          </span>
+                          <span class="message">
+                            Jatin I found you on LinkedIn...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof3.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> John Deo </span>
+                            <span class="time">16 mins </span>
+                          </span>
+                          <span class="message">
+                            Fwd: Important Notice Regarding Your Domain Name...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof1.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Rajesh </span>
+                            <span class="time">2 hrs </span>
+                          </span>
+                          <span class="message">
+                            pls take a print of attachments.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof8.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Lina Smith </span>
+                            <span class="time">40 mins </span>
+                          </span>
+                          <span class="message"> Apply for Ortho Surgeon </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../assets/img/prof/prof5.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Jacob Ryan </span>
+                            <span class="time">46 mins </span>
+                          </span>
+                          <span class="message">
+                            Request for leave application.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div
+                      class="slimScrollBar"
+                      style="
+                        background: rgb(158, 165, 171) none repeat scroll 0% 0%;
+                        width: 5px;
+                        position: absolute;
+                        top: 0px;
+                        opacity: 0.4;
+                        display: block;
+                        border-radius: 7px;
+                        z-index: 99;
+                        right: 1px;
+                      "
+                    ></div>
+                    <div
+                      class="slimScrollRail"
+                      style="
+                        width: 5px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        display: none;
+                        border-radius: 7px;
+                        background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                        opacity: 0.2;
+                        z-index: 90;
+                        right: 1px;
+                      "
+                    ></div>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Messages </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="student-id">
+            <div class="student-id-img">
+              <img class="img_fluid" src="./img/std3.jpg" alt="" />
+              <span class="img_fluid-span">Joan</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section>
         <div class="page-title">
@@ -262,9 +714,11 @@
                 <td>Jens Brincker</td>
                 <td>Kenny Josh</td>
                 <td>27/05/2020</td>
-                <td>Paid</td>
+                <td>
+                  <span class="fees fees-sm fees-warning">paid </span>
+                </td>
                 <td>Mechaical</td>
-                <td>Nig</td>
+                <td><span class="flag flag-us"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -273,9 +727,11 @@
                 <td>Mark Hay</td>
                 <td>Mykel Kelvin</td>
                 <td>26/02/2020</td>
-                <td>unpaid</td>
+                <td>
+                  <span class="fees fees-sm fees-danger">unpaid </span>
+                </td>
                 <td>Science</td>
-                <td>Uganda</td>
+                <td><span class="flag flag-ug"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -284,9 +740,11 @@
                 <td>Anthony Davie</td>
                 <td>Lilian Love</td>
                 <td>20/06/2020</td>
-                <td>paid</td>
+                <td>
+                  <span class="fees fees-sm fees-warning">paid </span>
+                </td>
                 <td>Agriculture</td>
-                <td>Nig</td>
+                <td><span class="flag flag-ng"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -295,9 +753,11 @@
                 <td>Sue Woodger</td>
                 <td>Jennifer Chohan</td>
                 <td>12/07/2019</td>
-                <td>unpaid</td>
+                <td>
+                  <span class="fees fees-sm fees-danger">unpaid </span>
+                </td>
                 <td>M.B.A</td>
-                <td>Gh</td>
+                <td><span class="flag flag-gh"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -306,9 +766,11 @@
                 <td>Lopita Young</td>
                 <td>Pooja Sarma</td>
                 <td>06/08/2018</td>
-                <td>Paid</td>
+                <td>
+                  <span class="fees fees-sm fees-warning">paid </span>
+                </td>
                 <td>pharmacotherapy</td>
-                <td>Sengal</td>
+                <td><span class="flag flag-sn"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -317,9 +779,11 @@
                 <td>klaus Rich</td>
                 <td>Julia Beans</td>
                 <td>08/02/2020</td>
-                <td>Unpaid</td>
+                <td>
+                  <span class="fees fees-sm fees-danger">unpaid </span>
+                </td>
                 <td>Mechanic</td>
-                <td>U.S.A</td>
+                <td><span class="flag flag-us"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -328,9 +792,11 @@
                 <td>Moses Soul</td>
                 <td>Major Banks</td>
                 <td>20/12/2019</td>
-                <td>Paid</td>
+                <td>
+                  <span class="fees fees-sm fees-warning">paid </span>
+                </td>
                 <td>M.B.A</td>
-                <td>Canada</td>
+                <td><span class="flag flag-ca"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -339,9 +805,11 @@
                 <td>Loveth james</td>
                 <td>Naomi Pride</td>
                 <td>29/06/2020</td>
-                <td>paid</td>
+                <td>
+                  <span class="fees fees-sm fees-warning">paid </span>
+                </td>
                 <td>Science</td>
-                <td>Kenya</td>
+                <td><span class="flag flag-ky"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -350,9 +818,11 @@
                 <td>Davie Hay</td>
                 <td>Harry Mauris</td>
                 <td>27/05/2020</td>
-                <td>paid</td>
+                <td>
+                  <span class="fees fees-sm fees-warning">paid </span>
+                </td>
                 <td>History & Diplomacy</td>
-                <td>Nig</td>
+                <td><span class="flag flag-ng"> </span></td>
               </tr>
               <tr>
                 <td>
@@ -361,14 +831,17 @@
                 <td>Sue Woodger</td>
                 <td>Bruno Brown</td>
                 <td>16/06/2018</td>
-                <td>unpaid</td>
+                <td>
+                  <span class="fees fees-sm fees-danger">unpaid </span>
+                </td>
                 <td>M.B.S.S</td>
-                <td>S.A</td>
+                <td><span class="flag flag-sa"> </span></td>
               </tr>
             </table>
           </div>
         </section>
       </div>
+
       <footer class="page-footer">
         <small
           >Made with <span>❤</span> by

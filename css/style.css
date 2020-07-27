@@ -36,7 +36,9 @@ body {
   display: block;
   z-index: -1;
 }
-
+.logo {
+  margin-top: -13px;
+}
 .top-nav {
   display: flex;
   flex-direction: row;
@@ -44,8 +46,13 @@ body {
   justify-content: space-around;
   background: linear-gradient(to left, #f46b45, #eea849);
   color: #fff;
-  height: 50px;
+  height: 60px;
   padding: 1em;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  width: 230px;
 }
 
 .menu {
