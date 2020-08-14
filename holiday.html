@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/student-dashboard.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flags.css" />
     <title>student-dashboard</title>
   </head>
   <body>
@@ -88,25 +89,277 @@
       </nav>
     </header>
     <section class="page-content">
-      <section class="search-and-user">
-        <form>
-          <input type="search" placeholder="Search Pages..." />
-          <button type="submit" aria-label="submit form">
-            <svg aria-hidden="true">
-              <use xlink:href="#search"></use>
-            </svg>
-          </button>
+      <div class="page-header-inner">
+        <form class="search-form-opened" action="#" method="GET">
+          <input
+            type="text"
+            class="form-control-header"
+            placeholder="Search..."
+            name="query"
+          />
+
+          <span class="input-group-btn">
+            <a href="#" class="btn submit">
+              <i class="fa fa-search"></i>
+            </a>
+          </span>
         </form>
         <div class="admin-profile">
-          <span class="greeting">Hello student!</span>
-          <div class="notifications">
-            <span class="badge">1</span>
-            <svg>
-              <use xlink:href="#users"></use>
-            </svg>
+          <div class="dropdown" id="drop">
+            <button class="dropbtn-header">
+              <span class="flag flag-ng"> </span> Nigeria
+              <i class="fa fa-angle-down"></i>
+            </button>
+            <div id="myDropdown1" class="dropdown-content-header">
+              <ul class="show" style="will-change: transform;">
+                <li>
+                  <a href="#"> <span class="flag flag-us"> </span> USA </a>
+                </li>
+                <li>
+                  <a href="#"> <span class="flag flag-gh"> </span> Ghana </a>
+                </li>
+                <li>
+                  <a href="#"> <span class="flag flag-ug"> </span> Uganda </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="flag flag-sa"> </span> South Africa
+                  </a>
+                </li>
+                <li>
+                  <a href="#"> <span class="flag flag-ca"> </span> Canada </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown notification-dropdown" id="drop2">
+            <button class="dropbtn-notification">
+              <span class="badge">6</span>
+              <i class="fa fa-bell-o"></i>
+            </button>
+            <div id="myDropdown2" class="dropdown-content-notifications">
+              <ul class="dropdown-menu show" style="will-change: transform;">
+                <li class="dropdown-external">
+                  <h3><span class="bold">Notifications</span></h3>
+                  <span class="notification-label purple-bgcolor">New 6</span>
+                </li>
+                <li>
+                  <div>
+                    <ul class="dropdown-menu-list">
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span
+                                class="notification-icon circle deepPink-bgcolor"
+                                ><i class="fa fa-check"> </i>
+                              </span>
+
+                              Congratulations!.
+                            </span>
+
+                            <span class="time">just now</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span
+                                class="notification-icon circle purple-bgcolor"
+                                ><i class="fa fa-user o"></i
+                              ></span>
+                              <b>John Micle </b>is now following you.
+                            </span>
+
+                            <span class="time">3 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span
+                                class="notification-icon circle blue-bgcolor"
+                                ><i class="fa fa-comments-o"></i
+                              ></span>
+                              <b>Sneha Jogi </b>sent you a message.
+                            </span>
+
+                            <span class="time">7 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span class="notification-icon circle pink"
+                                ><i class="fa fa-heart"></i
+                              ></span>
+                              <b>Ravi Patel </b>like your photo.
+                            </span>
+                            <span class="time">12 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span class="notification-icon circle yellow"
+                                ><i class="fa fa-warning"></i
+                              ></span>
+                              Warning!
+                            </span>
+                            <span class="time">15 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span class="notification-icon circle red"
+                                ><i class="fa fa-times"></i
+                              ></span>
+                              Application error.
+                            </span>
+                            <span class="time">10 hrs</span>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Notifications </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown" id="drop3">
+            <button class="dropbtn-mail">
+              <span class="badge2">2</span>
+              <i class="fa fa-envelope-o"></i>
+            </button>
+            <div id="myDropdown3" class="dropdown-content-mail">
+              <ul class="dropdown-menu show">
+                <li class="dropdown-external">
+                  <h3><span class="bold">Messages</span></h3>
+                  <span class="notification-label cyan-bgcolor">New 2</span>
+                </li>
+                <li>
+                  <div>
+                    <ul class="dropdown-menu-list">
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof8.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Sarah Smith </span>
+                            <span class="time">Just Now </span>
+                          </span>
+                          <span class="message">
+                            Jatin I found you on LinkedIn...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof3.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> John Deo </span>
+                            <span class="time">16 mins </span>
+                          </span>
+                          <span class="message">
+                            Fwd: Important Notice Regarding Your Domain Name...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof1.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Rajesh </span>
+                            <span class="time">2 hrs </span>
+                          </span>
+                          <span class="message">
+                            pls take a print of attachments.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof2.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Lina Smith </span>
+                            <span class="time">40 mins </span>
+                          </span>
+                          <span class="message"> Apply for Ortho Surgeon </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof5.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Jacob Ryan </span>
+                            <span class="time">46 mins </span>
+                          </span>
+                          <span class="message">
+                            Request for leave application.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Messages </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="student-id">
+            <div class="student-id-img">
+              <img class="img_fluid" src="./img/std3.jpg" alt="" />
+              <span class="img_fluid-span">Joan</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section>
         <div class="page-title">
@@ -132,164 +385,118 @@
       </section>
 
       <div class="student-wrapper">
-        <section class="grid">
-          <div class="row row-table">
-            <div class="col-md-12">
-              <h3 class="table-h3">Holiday List</h3>
-              <div class="library-layout">
-                <div class="col-sm-12 col-md-6">
-                  <div class="dataTables_length">
-                    <label
-                      >Show
-                      <select
-                        name="select"
-                        aria-controls="example4"
-                        class="form-control"
-                        ><option value="10">10</option
-                        ><option value="25">25</option
-                        ><option value="50">50</option
-                        ><option value="100">100</option></select
-                      >
-                      entries</label
-                    >
-                  </div>
+        <div class="col-md-12 card-container">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="img-container-holiday">
+                <img src="./img/logo.png" alt="" />
+                <div class="heart"></div>
+                <div class="holiday-content">
+                  <p>
+                    We the OneSchool wishes you a happy holiday full of fun with
+                    your family and love ones...Stay safe till we met again.
+                  </p>
+                  <span>- OneSchool</span>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                  <div class="dataTables_filter">
-                    <label
-                      >Search:<input
-                        type="search"
-                        class="form-control"
-                        placeholder=""
-                        aria-controls="example4"
-                    /></label>
-                  </div>
+                <div class="share-btn" id="share-btn">
+                  <i class="fa fa-share" aria-hidden="true"></i>
+                </div>
+                <div class="social-media-icons" id="social-media-icons">
+                  <ul>
+                    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                    <li>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <table>
-                <tr>
-                  <th>#</th>
-                  <th>Title</th>
-                  <th>Type</th>
-                  <th>Start Date</th>
-                  <th>End Date</th>
-                  <th>Details</th>
-                  <th>Comments</th>
-                </tr>
-                <tr>
-                  <td>
-                    1
-                  </td>
-                  <td>New Year's Day</td>
-                  <td>Public Holiday</td>
-                  <td>01 january 2019</td>
-                  <td>03 january 2019</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    2
-                  </td>
-                  <td>Memoral Day</td>
-                  <td>Public Holiday</td>
-                  <td>29/05/2019</td>
-                  <td>29 May 2019</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    3
-                  </td>
-                  <td>Christmas Day</td>
-                  <td>Public Holiday</td>
-                  <td>25 December 2019</td>
-                  <td>03 january 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    4
-                  </td>
-                  <td>Annual Function</td>
-                  <td>Holiday By School</td>
-                  <td>01 March 2020</td>
-                  <td>03 march 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    5
-                  </td>
-                  <td>Children.s Day</td>
-                  <td>Public Holiday</td>
-                  <td>25 April 2020</td>
-                  <td>28 April 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    6
-                  </td>
-                  <td>Salah Day</td>
-                  <td>Public Holiday</td>
-                  <td>15 May 2020</td>
-                  <td>18 May 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    7
-                  </td>
-                  <td>Vacation Day</td>
-                  <td>School Holiday</td>
-                  <td>2 December 2019</td>
-                  <td>03 january 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    8
-                  </td>
-                  <td>Break</td>
-                  <td>School Holiday</td>
-                  <td>02 June 2020</td>
-                  <td>02 June 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    9
-                  </td>
-                  <td>Vacation Day</td>
-                  <td>School Holiday</td>
-                  <td>2 December 2019</td>
-                  <td>03 january 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-                <tr>
-                  <td>
-                    10
-                  </td>
-                  <td>Salah Day</td>
-                  <td>Public Holiday</td>
-                  <td>15 May 2020</td>
-                  <td>18 May 2020</td>
-                  <td>Lorem ipsum is simply dummy text of the Printing</td>
-                  <td>Enjoy Yourself</td>
-                </tr>
-              </table>
             </div>
           </div>
-        </section>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="img-container-holiday">
+                <img src="./img/logo.png" alt="" />
+                <div class="heart"></div>
+                <div class="holiday-content">
+                  <p>
+                    We the OneSchool wishes you a happy holiday full of fun with
+                    your family and love ones...Stay safe till we met again.
+                  </p>
+                  <span>- OneSchool</span>
+                </div>
+                <div class="share-btn" id="share-btn">
+                  <i class="fa fa-share" aria-hidden="true"></i>
+                </div>
+                <div class="social-media-icons" id="social-media-icons">
+                  <ul>
+                    <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                    <li>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="page">
+            <div class="red_bar"></div>
+            <div class="family_photo"></div>
+            <div class="family sam"></div>
+            <div class="family marla"></div>
+            <div class="family parker"></div>
+            <div class="text instructions">
+              <h3 class="greeting-title">Merry Christmas</h3>
+              <b>We are so grateful for you</b> and wish you the best during
+              this special time of the year!<br />
+              <span style="font-size: 0.7em; color: #f5f5f5; font-weight: 600;"
+                ><br />
+                25 December 2018-01 January 2019</span
+              >
+            </div>
+            <div class="text hidden about_sam">
+              <b>Sam</b> splits his time between full-time work, school and his
+              family. He is loving his new job as a web-developer and following
+              BYU sports, but his favorite time is spent having fun with his
+              family. <br /><br />
+              Sam has one class to finish at BYU in order to earn his degree and
+              is looking forward to closing that chapter and focus his time on
+              hie work and the school.
+            </div>
+            <div class="text hidden about_marla">
+              <b>Marla</b> takes care of the boys full-time. She loves blogging,
+              exercizing, cooking, and coming up with fun activities with
+              Parker. She is a spectacular mom. <br /><br />
+              She is looking forward to finishing up her degree at BYU-I this
+              coming year.
+            </div>
+            <div class="text hidden about_parker">
+              <b>Parker</b> is the energy that fuels our home! He loves trains,
+              cars, balls, running up and down the hall, and sneaking up on
+              people. He is so much fun and so very sweet. <br /><br />
+              Parker will turn two this year and can't wait for the season to
+              turn back to summer so he can spend all his time outside again.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="loading">
+            <h2>01 January 2018</h2>
+            <div class="loading-bar"></div>
+            <h2>03 January 2019</h2>
+          </div>
+          <div class="loading-center">
+            <div><h2>Happy New Year</h2></div>
+            <div></div>
+            <div><h2>2019</h2></div>
+            <div></div>
+          </div>
+        </div>
       </div>
       <footer class="page-footer">
         <small
@@ -299,5 +506,36 @@
       </footer>
     </section>
     <script src="script/student.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".heart").click(function () {
+          $(this).toggleClass("active");
+        });
+
+        $(".share-btn").click(function () {
+          $(".social-media-icons").toggleClass("close");
+        });
+      });
+    </script>
+    <script>
+      const id = document.getElementById("myDropdown1");
+      const id1 = document.getElementById("myDropdown2");
+      const id2 = document.getElementById("myDropdown3");
+
+      const drop = document.getElementById("drop");
+      const drop2 = document.getElementById("drop2");
+      const drop3 = document.getElementById("drop3");
+
+      drop.onclick = function (e) {
+        myDrops(id);
+      };
+      drop2.onclick = function (e) {
+        myDrops(id1);
+      };
+      drop3.onclick = function (e) {
+        myDrops(id2);
+      };
+    </script>
   </body>
 </html>

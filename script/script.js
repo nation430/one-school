@@ -20,8 +20,8 @@ function Validate() {
   if (name.value == "") {
     name.style.border = "1px solid red";
     document.getElementById("name_div").style.color = "red";
-    email_error.textContent = "name is required";
-    email.focus();
+    name_error.textContent = "name is required";
+    name.focus();
     return false;
   }
   // validate email

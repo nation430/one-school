@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/student-dashboard.css" />
-    <!-- <link rel="stylesheet" href="css/admission.css" /> -->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flags.css" />
     <title>student-dashboard</title>
   </head>
   <body>
@@ -33,7 +33,7 @@
             </a>
           </li>
           <li>
-            <a href="Professors.html">
+            <a href="professors.html">
               <svg>
                 <use xlink:href="#users"></use>
               </svg>
@@ -57,25 +57,277 @@
       </nav>
     </header>
     <section class="page-content">
-      <section class="search-and-user">
-        <form>
-          <input type="search" placeholder="Search Pages..." />
-          <button type="submit" aria-label="submit form">
-            <svg aria-hidden="true">
-              <use xlink:href="#search"></use>
-            </svg>
-          </button>
+      <div class="page-header-inner">
+        <form class="search-form-opened" action="#" method="GET">
+          <input
+            type="text"
+            class="form-control-header"
+            placeholder="Search..."
+            name="query"
+          />
+
+          <span class="input-group-btn">
+            <a href="#" class="btn submit">
+              <i class="fa fa-search"></i>
+            </a>
+          </span>
         </form>
         <div class="admin-profile">
-          <span class="greeting">Hello student!</span>
-          <div class="notifications">
-            <span class="badge">1</span>
-            <svg>
-              <use xlink:href="#users"></use>
-            </svg>
+          <div class="dropdown" id="drop">
+            <button class="dropbtn-header">
+              <span class="flag flag-ng"> </span> Nigeria
+              <i class="fa fa-angle-down"></i>
+            </button>
+            <div id="myDropdown1" class="dropdown-content-header">
+              <ul class="show" style="will-change: transform;">
+                <li>
+                  <a href="#"> <span class="flag flag-us"> </span> USA </a>
+                </li>
+                <li>
+                  <a href="#"> <span class="flag flag-gh"> </span> Ghana </a>
+                </li>
+                <li>
+                  <a href="#"> <span class="flag flag-ug"> </span> Uganda </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="flag flag-sa"> </span> South Africa
+                  </a>
+                </li>
+                <li>
+                  <a href="#"> <span class="flag flag-ca"> </span> Canada </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown notification-dropdown" id="drop2">
+            <button class="dropbtn-notification">
+              <span class="badge">6</span>
+              <i class="fa fa-bell-o"></i>
+            </button>
+            <div id="myDropdown2" class="dropdown-content-notifications">
+              <ul class="dropdown-menu show" style="will-change: transform;">
+                <li class="dropdown-external">
+                  <h3><span class="bold">Notifications</span></h3>
+                  <span class="notification-label purple-bgcolor">New 6</span>
+                </li>
+                <li>
+                  <div>
+                    <ul class="dropdown-menu-list">
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span
+                                class="notification-icon circle deepPink-bgcolor"
+                                ><i class="fa fa-check"> </i>
+                              </span>
+
+                              Congratulations!.
+                            </span>
+
+                            <span class="time">just now</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span
+                                class="notification-icon circle purple-bgcolor"
+                                ><i class="fa fa-user o"></i
+                              ></span>
+                              <b>John Micle </b>is now following you.
+                            </span>
+
+                            <span class="time">3 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span
+                                class="notification-icon circle blue-bgcolor"
+                                ><i class="fa fa-comments-o"></i
+                              ></span>
+                              <b>Sneha Jogi </b>sent you a message.
+                            </span>
+
+                            <span class="time">7 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span class="notification-icon circle pink"
+                                ><i class="fa fa-heart"></i
+                              ></span>
+                              <b>Ravi Patel </b>like your photo.
+                            </span>
+                            <span class="time">12 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span class="notification-icon circle yellow"
+                                ><i class="fa fa-warning"></i
+                              ></span>
+                              Warning!
+                            </span>
+                            <span class="time">15 mins</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="notification-details">
+                            <span>
+                              <span class="notification-icon circle red"
+                                ><i class="fa fa-times"></i
+                              ></span>
+                              Application error.
+                            </span>
+                            <span class="time">10 hrs</span>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Notifications </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown" id="drop3">
+            <button class="dropbtn-mail">
+              <span class="badge2">2</span>
+              <i class="fa fa-envelope-o"></i>
+            </button>
+            <div id="myDropdown3" class="dropdown-content-mail">
+              <ul class="dropdown-menu show">
+                <li class="dropdown-external">
+                  <h3><span class="bold">Messages</span></h3>
+                  <span class="notification-label cyan-bgcolor">New 2</span>
+                </li>
+                <li>
+                  <div>
+                    <ul class="dropdown-menu-list">
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof8.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Sarah Smith </span>
+                            <span class="time">Just Now </span>
+                          </span>
+                          <span class="message">
+                            Jatin I found you on LinkedIn...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof3.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> John Deo </span>
+                            <span class="time">16 mins </span>
+                          </span>
+                          <span class="message">
+                            Fwd: Important Notice Regarding Your Domain Name...
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof1.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Rajesh </span>
+                            <span class="time">2 hrs </span>
+                          </span>
+                          <span class="message">
+                            pls take a print of attachments.
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof2.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Lina Smith </span>
+                            <span class="time">40 mins </span>
+                          </span>
+                          <span class="message"> Apply for Ortho Surgeon </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span class="photo">
+                            <img
+                              src="../img/prof5.jpg"
+                              class="img-circle"
+                              alt=""
+                            />
+                          </span>
+                          <span class="subject">
+                            <span class="from"> Jacob Ryan </span>
+                            <span class="time">46 mins </span>
+                          </span>
+                          <span class="message">
+                            Request for leave application.
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-menu-footer">
+                    <a href="#"> All Messages </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="student-id">
+            <div class="student-id-img">
+              <img class="img_fluid" src="./img/std3.jpg" alt="" />
+              <span class="img_fluid-span">Joan</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section>
         <div class="page-title">
@@ -103,7 +355,7 @@
       <div class="student-wrapper">
         <section class="grid board1_section">
           <div class="board1_tabs">
-            <ul>
+            <ul class="listGrid">
               <li class="active" data-li="today">List View</li>
               <li data-li="month">Grid View</li>
             </ul>
@@ -117,18 +369,12 @@
                 <div class="card-head">
                   <h3 class="">All Professors</h3>
                   <div class="tools">
-                    <a
-                      class="fa fa-repeat btn-color box-refresh"
-                      href="javascript:;"
-                    ></a>
+                    <a class="fa fa-repeat btn-color box-refresh" href="#"></a>
                     <a
                       class="t-collapse btn-color fa fa-chevron-down"
-                      href="javascript:;"
+                      href="#"
                     ></a>
-                    <a
-                      class="t-close btn-color fa fa-times"
-                      href="javascript:;"
-                    ></a>
+                    <a class="t-close btn-color fa fa-times" href="#"></a>
                   </div>
                 </div>
                 <div class="dropdown">
@@ -136,22 +382,17 @@
                     Tools <i class="fa fa-angle-down"></i>
                   </button>
                   <div id="myDropdown" class="dropdown-content">
-                    <ul
-                      class="dropdown-menu pull-right"
-                      style="will-change: transform;"
-                    >
+                    <ul class="pull-right" style="will-change: transform;">
                       <li>
-                        <a href="javascript:;">
-                          <i class="fa fa-print"></i> Print
-                        </a>
+                        <a href="#"> <i class="fa fa-print"></i> Print </a>
                       </li>
                       <li>
-                        <a href="javascript:;">
+                        <a href="#">
                           <i class="fa fa-file-pdf-o"></i> Save as PDF
                         </a>
                       </li>
                       <li>
-                        <a href="javascript:;">
+                        <a href="#">
                           <i class="fa fa-file-excel-o"></i> Export to Excel
                         </a>
                       </li>
@@ -159,7 +400,7 @@
                   </div>
                 </div>
                 <div class="library-layout">
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12">
                     <div class="dataTables_length">
                       <label
                         >Show
@@ -176,7 +417,7 @@
                       >
                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12">
                     <div class="dataTables_filter">
                       <label
                         >Search:<input
@@ -421,5 +662,24 @@
       </footer>
     </section>
     <script src="script/student.js"></script>
+    <script>
+      const id = document.getElementById("myDropdown1");
+      const id1 = document.getElementById("myDropdown2");
+      const id2 = document.getElementById("myDropdown3");
+
+      const drop = document.getElementById("drop");
+      const drop2 = document.getElementById("drop2");
+      const drop3 = document.getElementById("drop3");
+
+      drop.onclick = function (e) {
+        myDrops(id);
+      };
+      drop2.onclick = function (e) {
+        myDrops(id1);
+      };
+      drop3.onclick = function (e) {
+        myDrops(id2);
+      };
+    </script>
   </body>
 </html>
