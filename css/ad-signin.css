@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-wrap: wrap;
 }
 
 .link {
@@ -35,14 +36,11 @@
   width: 400px;
   position: relative;
   margin: 10% auto;
-  background: #040404;
-  color: #fff;
+  /* background: #040404; */
   max-width: 100%;
   height: auto;
   background-image: radial-gradient(#001cff 10.2%, transparent 0);
   background-size: 13px 13px;
-  border-radius: 10px;
-  box-shadow: 4px 3px 7px 2px #0202023b;
   box-sizing: border-box;
 }
 
@@ -119,4 +117,10 @@ form button {
   border: 2px double crimson;
   border-radius: 4px;
   color: #fff;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 411px) {
+  .link {
+    font-size: 1em;
+  }
 }

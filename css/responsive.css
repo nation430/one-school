@@ -1,0 +1,15 @@
+@media screen and (max-width: 411px) {
+  .box1 {
+    flex-basis: 100%;
+  }
+  .box1 > p {
+    font-size: 12px;
+  }
+  .button {
+    margin: 1rem auto;
+  }
+
+  .link {
+    font-size: 1em;
+  }
+}
