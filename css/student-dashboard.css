@@ -112,7 +112,7 @@ body {
 
 .page-header .admin-menu li > * {
   width: 100%;
-  padding: 30px 15px;
+  padding: 20px 15px;
 }
 
 .page-header .admin-menu .menu-heading h3 {
@@ -450,7 +450,7 @@ table {
 td,
 th {
   border: 1px solid #dddddd0d;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 .table-h3 {
@@ -1031,7 +1031,7 @@ th {
 }
 
 .status-warning {
-  background: linear-gradient(45deg, #66ff59, #00ff1c) !important;
+  background: linear-gradient(45deg, #48ac04, #09a41a) !important;
 }
 .status {
   text-shadow: none !important;
@@ -1048,7 +1048,7 @@ th {
   border-radius: 4px;
 }
 .status-danger {
-  background: linear-gradient(45deg, #ff5370, #ff869a) !important;
+  background: linear-gradient(45deg, #ec0a30, #ee0027) !important;
 }
 
 /* card-img-container */
@@ -1131,7 +1131,13 @@ th {
   color: #18b76e;
   letter-spacing: 2px;
 }
-
+.holiday-date {
+  position: absolute;
+  right: 30px;
+  top: 80%;
+  bottom: 0;
+  font-family: "lobster", cursive;
+}
 .share-btn {
   position: absolute;
   bottom: 20px;
@@ -1370,74 +1376,4 @@ th {
   100% {
     opacity: 1;
   }
-}
-
-.loading {
-  position: fixed;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--page-content-txtColor);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 15;
-  animation: fadeout 11s linear forwards;
-}
-
-@keyframes fadeout {
-  0%,
-  91% {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.loading h2 {
-  color: inherit;
-}
-
-.loading .loading-bar {
-  position: relative;
-  width: 400px;
-  height: 40px;
-  background: transparent;
-  margin: 0 20px;
-  border: 2px solid rgba(42, 42, 46, 1);
-  box-sizing: border-box;
-}
-
-.loading .loading-bar:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  transform-origin: left;
-  animation: animate 10s linear forwards;
-}
-
-.loading .loading-bar:after {
-  content: "Loading...";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  text-align: center;
-  line-height: 36px;
-  color: var(--page-content-blockColor);
-  font-size: 20px;
-  mix-blend-mode: difference;
 }

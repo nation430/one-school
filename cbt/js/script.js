@@ -13,11 +13,9 @@ let availableQuesions = [];
 
 let questions = [];
 
-fetch(
-  "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
-)
+fetch("js/script.js")
   .then((res) => {
-    console.log(res.data);
+    console.log(res.json);
     return res.json();
   })
   .then((loadedQuestions) => {

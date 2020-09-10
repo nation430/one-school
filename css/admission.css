@@ -82,7 +82,7 @@ th {
 }
 
 .fees-warning {
-  background: linear-gradient(45deg, #66ff59, #00ff1c) !important;
+  background: linear-gradient(45deg, #48ac04, #09a41a) !important;
 }
 .fees {
   text-shadow: none !important;
@@ -97,5 +97,5 @@ th {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 .fees-danger {
-  background: linear-gradient(45deg, #ff5370, #ff869a) !important;
+  background: linear-gradient(45deg, #ec0a30, #ee0027) !important;
 }
